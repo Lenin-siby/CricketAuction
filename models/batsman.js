@@ -2,8 +2,8 @@ const Player = require("./player");
 
 class Batsman extends Player {
 
-    constructor(id, name, age) {
-        super(id, name, age, "Batsman");
+    constructor(id, name, age, basePrice) {
+        super(id, name, age, "Batter", basePrice);
     }
 
 }

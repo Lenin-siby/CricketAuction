@@ -11,15 +11,19 @@ class Team {
 
     showPlayers() {
 
-        console.log("\n" + this.teamName);
+        console.log("\n" + this.teamName + ":");
 
         this.players.forEach(player => {
+
             console.log(
-                "ID : " + player.id +
-                " | Name : " + player.name +
-                " | Age : " + player.age +
-                " | Role : " + player.role
+                "ID: " + player.id +
+                ", Name: " + player.name +
+                ", Age: " + player.age +
+                ", PlayerType: " + player.playerType.toLowerCase() +
+                ", Base Price: " + player.basePrice +
+                ", Sold Price: " + player.soldPrice
             );
+
         });
 
     }

@@ -1,10 +1,12 @@
 class Player {
 
-    constructor(id, name, age, role) {
+    constructor(id, name, age, playerType, basePrice) {
         this.id = id;
         this.name = name.toUpperCase();
         this.age = age;
-        this.role = role;
+        this.playerType = playerType;
+        this.basePrice = basePrice;
+        this.soldPrice = 0;
     }
 
 }

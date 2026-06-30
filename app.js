@@ -2,14 +2,33 @@ const Team = require("./models/team");
 const players = require("./testData");
 const AuctionUtils = require("./utils/auctionUtils");
 
+const csk = new Team("CSK");
+const rcb = new Team("RCB");
 
-const teamA = new Team("TEAM A");
-const teamB = new Team("TEAM B");
+console.log("Cricket Auction Manager\n");
 
+console.log("Eligible Players:\n");
 
-AuctionUtils.startAuction(players, teamA, teamB);
+players.forEach(player => {
 
-console.log("========== CRICKET AUCTION ==========");
+    if (player.age >= 18) {
 
-teamA.showPlayers();
-teamB.showPlayers();
+        console.log(
+            "ID: " + player.id +
+            ", Name: " + player.name +
+            ", Age: " + player.age +
+            ", PlayerType: " + player.playerType.toLowerCase() +
+            ", Base Price: " + player.basePrice
+        );
+
+    }
+
+});
+
+AuctionUtils.startAuction(players, csk, rcb);
+
+console.log("\nAuction Result");
+
+csk.showPlayers();
+
+rcb.showPlayers();
